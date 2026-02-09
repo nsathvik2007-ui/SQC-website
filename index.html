@@ -1,77 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>Space Quant Coders</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Quant Coders – NIT Jalandhar</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'sqc-blue':   '#1e40af',
+            'sqc-purple': '#6b21a8',
+            'sqc-cyan':   '#0891b2',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0);   }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .glow-hover:hover {
+      box-shadow: 0 0 40px -8px rgba(30, 64, 175, 0.4);
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #60a5fa, #a78bfa, #67e8f9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    body {
+      background: 
+        url('https://thumbs.dreamstime.com/b/dark-blue-night-sky-purple-tones-galaxy-shown-featuring-bright-prominent-milky-way-accompanied-multitude-371871681.jpg') 
+        no-repeat center center fixed;
+      background-size: cover;
+      background-position: center;
+      /* Optional: subtle dark overlay to improve text readability */
+      background-color: rgba(0, 0, 0, 0.65);
+      background-blend-mode: multiply;
+    }
+
+    .content-bg {
+      background: rgba(8, 8, 20, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Fallback if image fails to load */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 15% 25%, rgba(30, 58, 138, 0.12), transparent 50%),
+                  radial-gradient(circle at 85% 75%, rgba(107, 33, 168, 0.10), transparent 50%);
+      pointer-events: none;
+      z-index: -2;
+    }
+  </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+<body class="text-gray-100 min-h-screen font-sans antialiased relative overflow-x-hidden">
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 class="text-5xl md:text-6xl font-extrabold tracking-wide">
-      SPACE QUANT CODERS
-    </h1>
+  <section class="relative min-h-screen flex items-center justify-center px-6 py-20">
+    <div class="relative z-10 max-w-5xl mx-auto text-center space-y-9 content-bg p-12 md:p-16 rounded-3xl border border-gray-900/40 shadow-2xl">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-none">
+        <span class="text-gradient">SPACE QUANT CODERS</span>
+      </h1>
 
-    <p class="mt-3 text-lg text-blue-400">
-      Official Technical Club of NIT Jalandhar
-    </p>
+      <p class="text-xl md:text-2xl text-blue-400/90 font-medium tracking-wide">
+        Official Technical Club of NIT Jalandhar
+      </p>
 
-    <p class="mt-5 text-gray-400 max-w-xl">
-      A community of builders, coders, and problem solvers shaping ideas into impact.
-    </p>
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        NITJ coders in the void.<br class="hidden sm:inline"/>
+        Shipping real projects • Dominating contests • Leveling up through mentorship & late-night commits.
+      </p>
 
-    <a href="https://forms.gle/fSGa8JjWgGW6gcv77"
-       class="mt-8 px-8 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition duration-300 shadow-lg">
-      Join Us
-    </a>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+        <a href="https://forms.gle/fSGa8JjWgGW6gcv77"
+           class="px-10 py-4 bg-gradient-to-r from-sqc-blue to-sqc-purple rounded-full text-lg font-semibold hover:brightness-110 hover:scale-[1.03] transition-all duration-300 shadow-2xl shadow-indigo-950/70">
+          Join the Void →
+        </a>
+        <a href="#domains" 
+           class="px-10 py-4 border border-gray-700 hover:border-gray-500 rounded-full text-lg font-medium transition-all duration-300 hover:bg-white/5">
+          See Domains
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- About -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-4">About Us</h2>
-    <p class="text-gray-400 leading-relaxed">
-      Space Quant Coders (SQC) is a student-run technical community focused on learning by building.
-      We grow together through projects, hackathons, workshops, and a strong mentorship culture - helping in overall networking and healthy relations.
-      Founded in 2022 by Mr.Vikram, we are the most interactive and active technical club in NITJ.
-    </p>
+  <section class="py-24 px-6 max-w-5xl mx-auto content-bg rounded-3xl my-8 mx-4 md:mx-auto border border-gray-900/50 shadow-xl">
+    <div class="text-center mb-12 animate-fadeInUp">
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gradient inline-block">
+        Who We Are
+      </h2>
+    </div>
+
+    <div class="prose prose-lg prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 text-center md:text-left">
+      <p>
+        Born 2022 under Mr. Vikram — <strong>Space Quant Coders</strong> is still the most alive technical club at NIT Jalandhar.
+      </p>
+      <p>
+        We don't just talk code — we <strong>build → crash → debug → ship</strong>.<br>
+        Real projects, savage hackathons, honest code reviews, and actual bonds.
+      </p>
+      <p class="text-blue-300/90 font-medium">
+        IT roots. Open to all branches. No elitism.
+      </p>
+    </div>
   </section>
 
-  <!-- Club Details -->
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">What Makes Us Different</h2>
+  <!-- Differentiators -->
+  <section class="py-24 px-6">
+    <div class="max-w-5xl mx-auto content-bg p-10 md:p-12 rounded-3xl border border-gray-900/50 shadow-xl">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient">
+        What Makes Us Dangerous
+      </h2>
 
-    <ul class="space-y-4 text-gray-400">
-      <li>🚀 Real-world projects and problem solving</li>
-      <li>🤝 Peer-to-peer learning & mentorship network</li>
-      <li>🏆 Hackathons, contests, and tech events</li>
-      <li>💡 Strong focus on DSA, Web Development, and AI/ML - already conducted AI/ML workshops</li>
-      <li>😎 Official technical club of NIT Jalandhar (yes, the coolest one) having roots in the IT department</li>
-    </ul>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-black/40 p-8 rounded-2xl border border-gray-800 hover:border-blue-900/60 transition-all duration-300 glow-hover animate-fadeInUp text-lg">
+          🚀 Projects that live outside GitHub
+        </div>
+        <div class="bg-black/40 p-8 rounded-2xl border border-gray-800 hover:border-purple-900/60 transition-all duration-300 glow-hover animate-fadeInUp text-lg" style="animation-delay:0.15s">
+          🤝 Seniors who roast juniors with love
+        </div>
+        <div class="bg-black/40 p-8 rounded-2xl border border-gray-800 hover:border-cyan-900/60 transition-all duration-300 glow-hover animate-fadeInUp text-lg" style="animation-delay:0.3s">
+          🏆 Weekly contests + hackathon war-teams
+        </div>
+        <div class="bg-black/40 p-8 rounded-2xl border border-gray-800 hover:border-blue-900/60 transition-all duration-300 glow-hover animate-fadeInUp text-lg" style="animation-delay:0.45s">
+          💡 DSA grind • Web beasts • AI/ML sessions — we deliver
+        </div>
+        <div class="bg-black/40 p-8 rounded-2xl border border-gray-800 hover:border-purple-900/60 transition-all duration-300 glow-hover animate-fadeInUp text-lg md:col-span-2 lg:col-span-1" style="animation-delay:0.6s">
+          😈 The club people whisper about
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Domains -->
-  <section class="py-16 px-6 bg-gray-800">
-    <h2 class="text-3xl font-semibold text-center mb-10">What We Do</h2>
+  <section id="domains" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto content-bg p-10 md:p-12 rounded-3xl border border-gray-900/50 shadow-xl">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient">
+        Domains We Own
+      </h2>
 
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition shadow-md">
-        🌐 Web Development
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition shadow-md">
-        🧠 DSA & Competitive Programming
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl hover:scale-105 transition shadow-md">
-        🤖 AI / ML
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group bg-black/40 p-10 rounded-3xl border border-gray-800 hover:border-blue-800/70 hover:shadow-2xl hover:shadow-blue-950/50 transition-all duration-400 glow-hover text-center">
+          <div class="text-6xl mb-6">🌐</div>
+          <h3 class="text-2xl font-bold mb-4 text-blue-300/90">Web Development</h3>
+          <p class="text-gray-400 group-hover:text-gray-200">Next.js • Tailwind • shadcn • full-stack monsters</p>
+        </div>
+
+        <div class="group bg-black/40 p-10 rounded-3xl border border-gray-800 hover:border-purple-800/70 hover:shadow-2xl hover:shadow-purple-950/50 transition-all duration-400 glow-hover text-center">
+          <div class="text-6xl mb-6">🧠</div>
+          <h3 class="text-2xl font-bold mb-4 text-purple-300/90">DSA & CP</h3>
+          <p class="text-gray-400 group-hover:text-gray-200">LeetCode streaks • CF rating • contest crushers</p>
+        </div>
+
+        <div class="group bg-black/40 p-10 rounded-3xl border border-gray-800 hover:border-cyan-800/70 hover:shadow-2xl hover:shadow-cyan-950/50 transition-all duration-400 glow-hover text-center">
+          <div class="text-6xl mb-6">🤖</div>
+          <h3 class="text-2xl font-bold mb-4 text-cyan-300/90">AI / ML</h3>
+          <p class="text-gray-400 group-hover:text-gray-200">PyTorch • LLMs • CV • Kaggle + workshops</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 text-center text-gray-500">
-    © 2026 Space Quant Coders <br />
-    Contact: 6280698087 - Bhumika | Instagram: sqc_nitj |
+  <footer class="py-16 text-center text-gray-600 border-t border-gray-900/70 bg-black/60 backdrop-blur-md">
+    <p class="text-lg">© 2026 Space Quant Coders • NIT Jalandhar</p>
+    <p class="mt-4 text-gray-500">
+      Contact: <a href="tel:6280698087" class="text-blue-400/80 hover:text-blue-300">6280698087</a> – Bhumika
+      <span class="mx-4">•</span>
+      Instagram: <a href="https://instagram.com/sqc_nitj" class="text-purple-400/80 hover:text-purple-300">@sqc_nitj</a>
+    </p>
   </footer>
 
 </body>
